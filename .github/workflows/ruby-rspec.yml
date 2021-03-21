@@ -12,7 +12,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 1.9.3-p551
+        ruby-version: 2.1.9
     - name: Install dependencies
       run: bundle install
     - name: Run tests
