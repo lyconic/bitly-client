@@ -1,8 +1,6 @@
 # Bitly::Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bitly/client`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A super simple, one-way client for using Bitly's API for shortening long URLs. This was created to support a legacy app on Ruby 1.9.3 and Rails 3.1 because many other shortening clients require Ruby 2.0+.
 
 ## Installation
 
@@ -22,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Bitly::Client.new("https://lyconic.com/2016/11/21/tips-hiring-quality-security-guards-officers/").shorten
+```
+
+## Config
+
+_your_app/config/initializers/bitly_client.rb_
+
+```ruby
+Bitly::Client.configure do |config|
+  config.api_token = YOUR_OATH_TOKEN
+  config.api_url = BITLY_API_SHORTEN_URL # e.g. https://api-ssl.bitly.com/v4/shorten
+end
+```
 
 ## Development
 
@@ -32,8 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/afilbert/bitly-client.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/lyconic/bitly-client.
 
 ## License
 
