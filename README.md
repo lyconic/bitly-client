@@ -30,10 +30,12 @@ _your_app/config/initializers/bitly_client.rb_
 
 ```ruby
 Bitly::Client.configure do |config|
-  config.api_token = YOUR_OATH_TOKEN
+  config.api_token = YOUR_GENERIC_OATH_ACCESS_TOKEN
   config.api_url = BITLY_API_SHORTEN_URL # e.g. https://api-ssl.bitly.com/v4/shorten
 end
 ```
+
+> [Get a Bitly generic access token](https://dev.bitly.com/docs/getting-started/authentication)
 
 ## Development
 
