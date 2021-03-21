@@ -2,10 +2,12 @@ require "spec_helper"
 
 RSpec.describe Bitly::Client do
   it "has a version number" do
-    expect(Bitly::Client::VERSION).not_to be nil
+    expect(described_class::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  context "#shorten" do
+    it "raises an exception if no API token available" do
+      expect { described_class.shorten("http://lyconic.com") }.to raise_error(Bitly::Client::ConfigError)
+    end
   end
 end
