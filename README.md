@@ -7,7 +7,7 @@ A super simple, one-way client for using Bitly's API for shortening long URLs. T
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bitly-client'
+gem 'bitly-client-legacy'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bitly-client
+    $ gem install bitly-client-legacy
 
 ## Usage
 
