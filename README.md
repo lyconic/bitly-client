@@ -29,6 +29,8 @@ Bitly::Client.new("https://lyconic.com/2016/11/21/tips-hiring-quality-security-g
 _your_app/config/initializers/bitly_client.rb_
 
 ```ruby
+require "bitly/client"
+
 Bitly::Client.configure do |config|
   config.api_token = YOUR_GENERIC_OATH_ACCESS_TOKEN
   config.api_url = BITLY_API_SHORTEN_URL # e.g. https://api-ssl.bitly.com/v4/shorten
