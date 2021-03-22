@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-Bitly::Client.new("https://lyconic.com/2016/11/21/tips-hiring-quality-security-guards-officers/").shorten
+Bitly::Client.shorten("https://lyconic.com/2016/11/21/tips-hiring-quality-security-guards-officers/")
 ```
 
 ## Config
